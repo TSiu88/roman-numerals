@@ -29,21 +29,34 @@ describe("RomanNumerals", () => {
     const n4 = "15";
     const n5 = "17";
     const n6 = "29";
+    const n7 = "40";
+    const n8 = "50";
     expect(ConvertToRomanNumerals(n1)).toEqual("X");
     expect(ConvertToRomanNumerals(n2)).toEqual("XI");
     expect(ConvertToRomanNumerals(n3)).toEqual("XIV");
     expect(ConvertToRomanNumerals(n4)).toEqual("XV");
     expect(ConvertToRomanNumerals(n5)).toEqual("XVII");
     expect(ConvertToRomanNumerals(n6)).toEqual("XXIX");
+    expect(ConvertToRomanNumerals(n7)).toEqual("XL");
+    expect(ConvertToRomanNumerals(n8)).toEqual("L");
   });
 
-  // test("Should return the Roman Numeral IV", () => {
-  //   const number = 4;
-  //   expect(romanNumeral.ConvertToRomanNumerals(number)).toEqual("I");
-  // });
-
-  // test("Should return the letter I", () => {
-  //   const number = 1;
-  //   expect(romanNumeral.ConvertToRomanNumerals(number)).toEqual("I");
-  // });
+  test("Should return hundreds place in Roman Numerals", () => {
+    const n1 = "101";
+    const n2 = "114";
+    const n3 = "115";
+    const n4 = "117";
+    const n5 = "150";
+    const n6 = "209";
+    const n7 = "346";
+    const n7 = "893";
+    expect(ConvertToRomanNumerals(n1)).toEqual("CI");
+    expect(ConvertToRomanNumerals(n2)).toEqual("CXIV");
+    expect(ConvertToRomanNumerals(n3)).toEqual("CXV");
+    expect(ConvertToRomanNumerals(n4)).toEqual("CXVII");
+    expect(ConvertToRomanNumerals(n5)).toEqual("CL");
+    expect(ConvertToRomanNumerals(n6)).toEqual("CCIX");
+    expect(ConvertToRomanNumerals(n7)).toEqual("CCCXLVI");
+    expect(ConvertToRomanNumerals(n7)).toEqual("CCCXLVI");
+  });
 });

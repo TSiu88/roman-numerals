@@ -1,8 +1,6 @@
-//pass in a number to convert to roman numerals
 export function ConvertToRomanNumerals(num) {
-  //Create a result string that will return the converted number
   let result = "";
-  //
+
   if (isNaN(parseInt(num))) {
     return "Not a number";
   }
@@ -10,8 +8,7 @@ export function ConvertToRomanNumerals(num) {
   if (num <= 0 || num >= 4000) {
     return "Number out of range";
   }
-  // I can't read the terminal
-  // me too )))
+
   return checkValues(num, result);
 
   function checkValues(num, roman) {
