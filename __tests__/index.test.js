@@ -49,7 +49,7 @@ describe("RomanNumerals", () => {
     const n5 = "150";
     const n6 = "209";
     const n7 = "346";
-    const n7 = "893";
+    const n8 = "893";
     expect(ConvertToRomanNumerals(n1)).toEqual("CI");
     expect(ConvertToRomanNumerals(n2)).toEqual("CXIV");
     expect(ConvertToRomanNumerals(n3)).toEqual("CXV");
@@ -57,6 +57,19 @@ describe("RomanNumerals", () => {
     expect(ConvertToRomanNumerals(n5)).toEqual("CL");
     expect(ConvertToRomanNumerals(n6)).toEqual("CCIX");
     expect(ConvertToRomanNumerals(n7)).toEqual("CCCXLVI");
-    expect(ConvertToRomanNumerals(n7)).toEqual("CCCXLVI");
+    expect(ConvertToRomanNumerals(n8)).toEqual("DCCCXCIII");
+  });
+
+  test("Should return thousands place in Roman Numerals", () => {
+    const n1 = "1111";
+    const n2 = "1123";
+    const n3 = "2345";
+    const n4 = "3456";
+    const n5 = "3999";
+    expect(ConvertToRomanNumerals(n1)).toEqual("MCXI");
+    expect(ConvertToRomanNumerals(n2)).toEqual("MCXXIII");
+    expect(ConvertToRomanNumerals(n3)).toEqual("MMCCCXLV");
+    expect(ConvertToRomanNumerals(n4)).toEqual("MMMCDLVI");
+    expect(ConvertToRomanNumerals(n5)).toEqual("MMMCMXCIX");
   });
 });
